@@ -29,7 +29,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Recycl
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup viewGroup, int i)
     {
-        View itemView= LayoutInflater.from(ViewGroup.getContext()).inflate(R.layout.catagoty_card,viewGroup,)
+        View itemView= LayoutInflater.from(ViewGroup.getContext()).inflate(R.layout.catagoty_card,viewGroup);
         return new RecyclerViewHolder(itemView);
     }
 
@@ -44,7 +44,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Recycl
     }
 
 
-    public class RecyclerViewHolder extends RecyclerView.ViewHolder {
+    public static class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView thumbnail;
         public TextView Title;

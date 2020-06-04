@@ -31,8 +31,8 @@ public class GirdItemPadding extends RecyclerView.ItemDecoration
 
         if (IncludeEdges)
         {
-            outRect.left = spacing - col*(1f/spanCount);
-            outRect.right = (col+1) *((1f/spanCount)*spacing);
+            outRect.left = spacing - col*(1/spanCount);
+            outRect.right = (col+1) *( (1/spanCount)*spacing);
 
             if(pos<spanCount)//top edge
             {
@@ -43,7 +43,7 @@ public class GirdItemPadding extends RecyclerView.ItemDecoration
             else
             {
                 outRect.left =col *spacing/spanCount;
-                outRect.right =  col*spacing-col+1 *spacing/spacing;
+                outRect.right =  (col*spacing - col+1) * (spacing/spacing);
                 if (pos >= spanCount)
                 {
                     outRect.top = spacing;
